@@ -15,7 +15,7 @@ data class Player(
         @Json(name = "total_fleets") val totalFleets: Int,
         @Json(name = "total_strength") val totalShips: Int,
         @Json(name = "alias") val name: String,
-        val tech: Research,
+//        val tech: Research,
         val avatar: Int,
         val conceded: Int,
         val ready: Int,

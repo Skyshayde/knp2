@@ -6,7 +6,7 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class Fleet(
         val uid: Int,
-        @Json(name = "ouid") val star_id: Int,
+        @Json(name = "ouid") val star_id: Int? = null,
         @Json(name = "st") val ships: Int,
         @Json(name = "n") val name: String,
         @Json(name = "l") val looping: Int,
@@ -14,8 +14,8 @@ data class Fleet(
         @Json(name = "puid") val player_id: Int,
         val x: Float,
         val y: Float,
-        val last_x: Float,
-        val last_y: Float
+        val last_x: Float? = null,
+        val last_y: Float? = null
 )
 
 @JsonClass(generateAdapter = true)
@@ -24,7 +24,9 @@ data class FleetOrder(
         val star_id: Int,
         val action: OrderAction,
         val ships: Int
-)
+) {
+    constructor(list: List<Int>) : this(list[0], list[1], OrderAction.values()[2], list[3])
+}
 
 enum class OrderAction(action: Int) {
     DoNothing(0),
