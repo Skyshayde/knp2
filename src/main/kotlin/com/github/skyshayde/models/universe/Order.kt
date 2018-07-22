@@ -1,6 +1,5 @@
-package com.github.skyshayde.models
+package com.github.skyshayde.models.universe
 
-import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)

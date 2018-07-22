@@ -1,9 +1,7 @@
 package com.github.skyshayde
 
 import com.github.kittinunf.fuel.httpPost
-import com.github.skyshayde.models.*
-import com.github.skyshayde.models.adapters.FleetAdapter
-import com.squareup.moshi.Moshi
+
 
 
 class Client {

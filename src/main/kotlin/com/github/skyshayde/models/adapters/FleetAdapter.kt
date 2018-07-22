@@ -1,7 +1,6 @@
 package com.github.skyshayde.models.adapters
 
-import com.github.skyshayde.models.FleetOrder
-import com.github.skyshayde.models.Star
+import com.github.skyshayde.models.universe.FleetOrder
 import com.squareup.moshi.FromJson
 
 class FleetAdapter {
